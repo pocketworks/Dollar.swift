@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import Dollar
 
-func ==<T: Equatable>(value: T?, other: T?) -> Bool {
-    return $.equal(value, other)
-}
+//func ==<T: Equatable>(value: T?, other: T?) -> Bool {
+//    return $.equal(value, other)
+//}

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Dollar
 
 internal extension Dictionary {
     /// Merges the dictionary with dictionaries passed. The latter dictionaries will override

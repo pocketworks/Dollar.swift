@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Dollar
 
 let RegexEscapePattern = "[\\-\\[\\]\\/\\{\\}\\(\\)\\*\\+\\?\\.\\\\\\^\\$\\|]"
 let RegexPatternRegex = Regex(RegexEscapePattern)

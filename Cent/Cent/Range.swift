@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Dollar
 
 internal extension Range {
     
