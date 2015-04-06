@@ -10,11 +10,11 @@ import Foundation
 
 extension String {
     
-    public var length: Int {
-        get {
-            return countElements(self)
-        }
-    }
+    //public var length: Int {
+      //  get {
+        //    return countElements(self)
+        //}
+    //}
     
     /// Get character at a subscript
     ///
