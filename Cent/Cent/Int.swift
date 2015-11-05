@@ -55,7 +55,7 @@ extension Int {
             digits << (selfCopy % 10)
             selfCopy = (selfCopy / 10)
         }
-        return digits.reverse()
+        return Array(digits.reverse())
     }
 
     /// Get the next int

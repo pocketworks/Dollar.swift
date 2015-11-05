@@ -21,7 +21,7 @@ extension String {
     /// :param i Index for which the character is returned
     /// :return Character at index i
     public subscript(i: Int) -> Character? {
-        if let char = Array(self).get(i) {
+        if let char = Array(self.characters).get(i) {
             return char
         }
         return .None
@@ -43,8 +43,8 @@ extension String {
     /// :param range The range from which to start and end the substring
     /// :return Substring
     public subscript(range: Range<Int>) -> String {
-        var start = Swift.advance(startIndex, range.startIndex)
-        var end = Swift.advance(startIndex, range.endIndex)
+        let start = startIndex.advancedBy(range.startIndex)
+        let end = startIndex.advancedBy(range.endIndex)
         return self.substringWithRange(Range(start: start, end: end))
     }
     
@@ -76,9 +76,9 @@ extension String {
     ///
     /// :return Array of strings after spliting
     public func split(delimiter: Character) -> [String] {
-        return Swift.split(self) { (char: Character) -> Bool in
+        return self.characters.split { (char: Character) -> Bool in
             char == delimiter
-        }
+        }.map { String($0) }
     }
 
     /// Remove leading whitespace characters
@@ -128,6 +128,6 @@ public func * (str: String, n: Int) -> String {
     n.times {
         stringBuilder.append(str)
     }
-    return Swift.join("", stringBuilder)
+    return stringBuilder.joinWithSeparator("")
 }
 
